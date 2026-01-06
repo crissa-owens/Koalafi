@@ -1,61 +1,136 @@
-# Getting Started with Helpi
+# 🐨 Koalafi — Career Matching Assistant
 
-Packages Included:
-* npm
-* bootstrap
-* react
-* openai
-* other configurations
+**Live Demo:** [https://crissa-owens.github.io/Koalafi/](https://crissa-owens.github.io/Koalafi/)
 
-Career Helpi Goal:
-To showcase various job fields and advise someone on which field or job would best suit them based on their answers to questions.
-- the ultimate decision making algorithm should be done through openai (GPT). Not a long list of if-else statements.
+Koalafi (featuring Ozzie the koala 🐨✨) is an interactive web app that helps users explore potential careers through guided questions and AI-powered insights. Users answer a series of basic and detailed questions, and Koalafi generates personalized career suggestions using the OpenAI API.
 
+This project was originally developed as part of a **Software Engineering course**, created collaboratively by a **team of four students (including myself)**. After the course ended, I **forked the repository and continued developing the project independently, with full permission from the other group members**.
 
+### Original Team Members
 
-## React Project Information:
+* Kevin Pinkett: [https://github.com/kevin-pinkett](https://github.com/kevin-pinkett)
+* Nolan Vasil: [https://github.com/nolanv45](https://github.com/nolanv45)
+* Asher Mills: [https://github.com/asher013](https://github.com/asher013)
+* **Crissa Owens**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Artwork Credit
 
-## Available Scripts
+**Ozzie the Koala — character design and artwork were created by one of my teammates:** Kevin Pinkett
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* AI-powered career recommendations
+* Guided multi-step question flow (basic → detailed → results)
+* Create-your-own AI-generated questions
+* Dark mode support
+* Adjustable text size for accessibility
+* User-provided OpenAI API key stored securely in Local Storage
+* Easy page navigation + persistent state
+* Custom mascot + UI theme
+* FAQ page for user help
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## 🏗️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Tool              | Purpose             |
+| ------------------| ------------------- |
+| React / Typescript| UI Framework        |
+| OpenAI API        | AI-driven responses |
+| CSS + Bootstrap   | Styling             |
+| React Context API | Theme + Text Size   |
+| GitHub Actions    | Deployment pipeline |
+| GitHub Pages      | Hosting             |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## API Key Handling
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Koalafi requires users to provide their **own OpenAI API key**. The key is:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Stored only in `localStorage`
+* Validated before use
+* Not transmitted anywhere except to OpenAI
+* Required to unlock the question pages
 
-### `npm run eject`
+If a key is invalid, the user is prompted to retry.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## App Flow
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Visit the site: [https://crissa-owens.github.io/Koalafi/](https://crissa-owens.github.io/Koalafi/)
+2. Enter your **OpenAI API key**
+3. Answer **basic questions**
+4. Continue to **detailed questions** (optional)
+5. View **career recommendations**
+6. Explore FAQs or try **custom AI questions**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## Running Locally
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+git clone https://github.com/crissa-owens/Koalafi.git
+cd Koalafi
+npm install
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+App runs at:
+
+```
+http://localhost:3000
+```
+
+---
+
+## Deployment — GitHub Pages via GitHub Actions
+
+This project deploys automatically to: [https://crissa-owens.github.io/Koalafi/](https://crissa-owens.github.io/Koalafi/)
+
+Deployment is handled using **GitHub Actions**, which:
+
+1. Builds the React app
+2. Publishes the `/build` output to GitHub Pages
+
+No manual deployment required
+
+---
+
+## Background & History
+
+Koalafi began as a **Software Engineering class project** with a team of four developers. After the course ended, I:
+
+* Forked the repo
+* Continued development independently
+* Made UI + accessibility improvements
+* Expanded AI functionality
+* Cleaned + reorganized code
+
+— all **with the full permission and support of my teammates**.
+
+---
+
+## AI Assistance & Documentation
+AI tools supported parts of this project:
+
+* GitHub Copilot helped generate documentation sections
+* GitHub Copilot assisted with debugging and CSS improvements
+* ChatGPT assisted with completing and polishing this README.md document
+All logic, design choices, and code structure decisions were controlled and reviewed by myself and my team.
+
+---
+
+## Acknowledgements
+
+**Huge thanks to my original teammates.**
+Special appreciation to **the teammate who designed Ozzie the Koala:** Kevin Pinkett
+
+Thanks also to:
+* OpenAI Developer Docs
+* React community tutorials
+* Everyone who tested and provided feedback
+
