@@ -138,7 +138,7 @@ function App() {
             display: "flex",
             alignItems: "center"
           }}>
-            <img src="/assets/Helpi Mascot.png" alt="mascot" style={{
+            <img src="assets/Helpi Mascot.png" alt="mascot" style={{
                 //display: "flex",
                 width: "var(--little-ozzie)",
                 padding: "10px",
@@ -152,7 +152,7 @@ function App() {
           {page === 'homePage' && (
             <div>
               <div className="Greeting-Box">
-                <img src="/assets/Helpi Mascot (fullclear).png" alt="mascot" style={{
+                <img src="assets/Helpi Mascot (fullclear).png" alt="mascot" style={{
                     width: "var(--ozzie)",
                     height: "var(--ozzie)",
                     marginRight: "10%"
