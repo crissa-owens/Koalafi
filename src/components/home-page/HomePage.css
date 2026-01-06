@@ -3,18 +3,18 @@
     flex-direction: row;
     justify-content: space-evenly;
     padding: 10px;
-    margin-top: 75px;
+    margin-top: 5vh;
     
 }
 
 .Page-Box{
     position: relative;
-    padding: 10px;
+    padding: 15px;
     padding-bottom: 25px;
     width: 30%;
-    min-height: 250px;
+    min-height: 30vh;
     border: 1px solid var(--border-color-2);
-    padding: 15px;
+    padding: 10px;
     border-radius: 8px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     background-color: var(--bg-color);

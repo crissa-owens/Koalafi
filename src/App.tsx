@@ -138,10 +138,10 @@ function App() {
             display: "flex",
             alignItems: "center"
           }}>
-            <img src="assets/Helpi Mascot.png" alt="mascot" style={{
+            <img src="/assets/Helpi Mascot.png" alt="mascot" style={{
                 //display: "flex",
-                width: "var(--ozzie)",
-                padding: "15px",
+                width: "var(--little-ozzie)",
+                padding: "10px",
                 }}></img>
             <div id="header-title">Koalafi</div>
           </div>
@@ -152,16 +152,17 @@ function App() {
           {page === 'homePage' && (
             <div>
               <div className="Greeting-Box">
-                <img src="assets/Helpi Mascot (fullclear).png" alt="mascot" style={{
-                    width: "25%",
-                    height: "25%",
+                <img src="/assets/Helpi Mascot (fullclear).png" alt="mascot" style={{
+                    width: "var(--ozzie)",
+                    height: "var(--ozzie)",
+                    marginRight: "10%"
                   }}></img>
                 <div style = {{fontSize: "var(--small-text)"}} className="Greeting-Text">
                   <div style={{position: "absolute", top: "10px", right: "10px"}}>
                     {/* <TTS text = "Hello! My name's Ozzie, and I'm a career matching wizard! Ready to see what you're koalafied for? Enter your ChatGPT API Key below to get started!"></TTS> */}
                   </div> 
                   <span> Hello! My name's Ozzie, and I'm a career matching wizard! Ready to see what you're koalafied for? </span>
-                  <span style={{ fontWeight: "bold" }}>Enter your ChatGPT API Key below to get started! </span>
+                  <span style={{ fontWeight: "bold" }}>Enter your OpenAI API Key below to get started! </span>
                   
                   <Form>
                     <Form.Label>API Key:</Form.Label>

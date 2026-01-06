@@ -94,36 +94,6 @@ export function BasicQuestions({openPopup, setPage, setAnswers, setQuestions}: B
     setCurrentQuestionId(QUESTIONS[0].id)
   }
 
-  function fillTempAnswers(){
-    const answers = [
-      "I enjoy a balance between collaboration and working alone.",
-      "Strongly Disagree",
-      "I deeply enjoy learning and solving technical problems.",
-      "Climate controlled workplace.",
-      "I enjoy leading small projects or mentoring peers.",
-      "Agree",
-      "Agree",
-      "Strongly Agree",
-      "Engineering or computer science",
-      "Technology and artificial intelligence",
-      "Disagree",
-      "Strongly Disagree",
-      "Agree",
-      "Strongly Agree",
-      "Neutral",
-      "Neutral",
-      "Strongly Agree",
-      "I need full creative freedom in my career.",
-      "I prefer to have my work help other indirectly.",
-      "Bachelor's degree",
-      "Disagree",
-      "Drawing, writing, or making music.",
-      "Agree"
-    ]
-    localSetBasicAnswers(answers)
-    setAnswers(answers)
-  }
-
   useEffect(() => {
     if (progress < 100) {
       const answeredQuestions = basicAnswers.filter(answer => answer !== "").length; 
@@ -168,11 +138,10 @@ export function BasicQuestions({openPopup, setPage, setAnswers, setQuestions}: B
               {currentQuestion.options.map((option: string, r_index: number) => (
                 <div>
                   <Button className="Answer-Button" data-testid={`Option ${r_index + 1}`}onClick={() => handleAnswerChange(currentQuestion.id, option)}
-                    style={{ backgroundColor: basicAnswers[currentQuestionId] === option ? "#FE604D" : "white",
+                    style={{ backgroundColor: basicAnswers[currentQuestionId] === option ? "var(--main-color)" : "white",
                              color: basicAnswers[currentQuestionId] === option ? "white" : "black"
                     }}>
                       <div className="Outer-Button-Box">
-                        <div className="Check-Marker">{basicAnswers[currentQuestionId] === option ? "✅" : ""}</div>
                         <div>{option}</div>
                       </div>
                     </Button>
@@ -190,8 +159,6 @@ export function BasicQuestions({openPopup, setPage, setAnswers, setQuestions}: B
           </div>
 
           <br></br>
-          <Button onClick={fillTempAnswers}>Kev's Answers</Button>
-          
         </div>
       </Form.Group>
     </div>
